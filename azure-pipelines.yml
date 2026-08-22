@@ -5,8 +5,16 @@
 
 
 # This section defines when the pipeline should run. Here it triggers automatically on every commit to the master branch.
-trigger:
-- master
+# trigger:
+# - master
+
+# if you want to auto start this enviroment after QA enviroment then add this section
+trigger: none
+resources:
+  pipelines:
+  - pipeline: QA
+    source: pk4727.API-Playwright_Cucumber
+    trigger: true
 
 # This section specifies the virtual machine image the pipeline will use to run all tasks.
 pool:
