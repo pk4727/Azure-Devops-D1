@@ -29,7 +29,7 @@ stages:
             # Repo configuration and folders check
             - checkout: self
             - script: |
-              pwd
+                pwd
                 ls -la
               displayName: 'Check Working Directory'
             
